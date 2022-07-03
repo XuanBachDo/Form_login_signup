@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #d6e9ff;
+
+    font-family: Montserrat;
+}
+
+.form{
+    max-width: 520px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form_item{
+    margin-bottom: 10px;
+}
+
+.form_item:last-child{
+    margin-bottom: 0px;
+}
+
+.form_input{
+    position: absolute;
+    left: -99999px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.form_label{
+    display: flex;
+    justify-content: space-between;
+    height: 84px;
+    width: 100%;
+    padding: 20px;
+    padding-left: 65px;
+    position: relative;
+    background: #fff;
+    border: 3px solid #fff;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 20px;
+
+}
+
+.form_label::before{
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 50% ;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 7px solid #e7e7e7;
+    transform: translateY(-50%);
+    transition: .3s;
+
+}
+
+.form_data{
+    display: flex;
+    flex-direction: column;
+}
+
+.form_title{
+    font-weight: bold;
+    font-size: 18px;
+    color: #000;
+    
+}
+
+.form_description{
+    font-size: 14px;
+    color: #000;
+}
+
+.form_price-status{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+
+}
+
+.form_price{
+    font-weight: normal;
+    font-size: 18px;
+    color: #2b78ff;
+
+}
+
+.form_status{
+    font-size: 14px;
+    color: #999;
+}
+
+.form_label:hover {
+    border-color: #e7e7e7;
+}
+.form_input:checked ~ .form_label{
+   border-color: #2b78ff;
+}
+.form_input:checked ~ .form_label:before {
+    border-color: #2678ff;
+}
